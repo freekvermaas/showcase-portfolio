@@ -4,6 +4,7 @@ import { useRef, useState, useEffect, useCallback } from "react"
 import Hero from "../components/Hero"
 import About from "../components/About"
 import Gallery from "../components/Gallery"
+import Header from "../components/Header"
 
 export default function Home() {
   const scrollContainerRef = useRef(null)
@@ -62,6 +63,7 @@ export default function Home() {
         WebkitOverflowScrolling: "'touch'",
         scrollBehavior: "'smooth'"
       }}>
+        <Header/>
       <Hero/>
       <About/>
       <Gallery/>
