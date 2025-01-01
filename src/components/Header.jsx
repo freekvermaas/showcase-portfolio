@@ -1,6 +1,6 @@
 const Header = ({ activeSection }) => {
-    const isActive = (section) =>
-      activeSection === section ? "font-bold" : "font-normal";
+    const getFontWeight = (section) =>
+      activeSection === section ? 500 : 200; // 500 for Medium, 200 for Extra Light
   
     const textColor = activeSection === "about" ? "text-white" : "text-black";
     const lineColor = activeSection === "about" ? "bg-white" : "bg-black";
@@ -25,22 +25,37 @@ const Header = ({ activeSection }) => {
           />
           <button
             onClick={() => handleScrollToSection("hero")}
-            className={`pt-2 text-center ${textColor} ${isActive("hero")} focus:outline-none`}
-            style={{ flex: "1 1 0%", textAlign: "start" }}
+            className={`pt-2 text-center ${textColor} focus:outline-none`}
+            style={{
+              flex: "1 1 0%",
+              textAlign: "start",
+              fontWeight: getFontWeight("hero"),
+              fontFamily: "'Inter', sans-serif",
+            }}
           >
             HOME
           </button>
           <button
             onClick={() => handleScrollToSection("about")}
-            className={`pt-2 px-4 ${textColor} ${isActive("about")} focus:outline-none`}
-            style={{ flex: "1 1 auto", textAlign: "center" }}
+            className={`pt-2 px-4 ${textColor} focus:outline-none`}
+            style={{
+              flex: "1 1 auto",
+              textAlign: "center",
+              fontWeight: getFontWeight("about"),
+              fontFamily: "'Inter', sans-serif",
+            }}
           >
             FREEK
           </button>
           <button
             onClick={() => handleScrollToSection("gallery")}
-            className={`pt-2 text-center ${textColor} ${isActive("gallery")} focus:outline-none`}
-            style={{ flex: "1 1 0%", textAlign: "end" }}
+            className={`pt-2 text-center ${textColor} focus:outline-none`}
+            style={{
+              flex: "1 1 0%",
+              textAlign: "end",
+              fontWeight: getFontWeight("gallery"),
+              fontFamily: "'Inter', sans-serif",
+            }}
           >
             GALLERY
           </button>
