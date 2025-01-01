@@ -1,6 +1,6 @@
 const Header = ({ activeSection }) => {
     const getFontWeight = (section) =>
-      activeSection === section ? 500 : 200; // 500 for Medium, 200 for Extra Light
+      activeSection === section ? 500 : 200;
   
     const textColor = activeSection === "about" ? "text-white" : "text-black";
     const lineColor = activeSection === "about" ? "bg-white" : "bg-black";
