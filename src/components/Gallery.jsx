@@ -16,7 +16,7 @@ const Gallery = memo(function Gallery() {
       </div>
       <div className="flex-grow flex flex-col justify-start items-center pt-10">
         {/* First Image */}
-        <Link href="/destination-page-1">
+        <Link href="/Upendo">
           <div
             className="relative transition-transform duration-300 ease-in-out hover:scale-105"
             onMouseEnter={() => setHoveredImage(1)}
@@ -33,7 +33,7 @@ const Gallery = memo(function Gallery() {
         </Link>
 
         {/* Second Image */}
-        <Link href="/destination-page-2">
+        <Link href="/TrendFocus">
           <div
             className="relative transition-transform duration-300 ease-in-out hover:scale-105"
             onMouseEnter={() => setHoveredImage(2)}
@@ -48,9 +48,8 @@ const Gallery = memo(function Gallery() {
             />
           </div>
         </Link>
-
         {/* New Third Image */}
-        <Link href="/destination-page-3">
+        <Link href="/McGoal">
           <div
             className="relative transition-transform duration-300 ease-in-out hover:scale-105"
             onMouseEnter={() => setHoveredImage(3)}
