@@ -1,17 +1,7 @@
 import React from 'react';
+import Link from 'next/link'; // Import Link from Next.js
 
 const GalleryHeader = () => {
-  const handleScrollToGallery = () => {
-    const gallerySection = document.getElementById("gallery");
-    if (gallerySection) {
-      gallerySection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-    }
-  };
-
   return (
     <header className="fixed top-0 left-0 w-full pt-4">
       <nav className="flex justify-center items-center max-w-4xl mx-auto relative">
@@ -24,16 +14,17 @@ const GalleryHeader = () => {
             }}
             aria-hidden="true"
           />
-          <button
-            onClick={handleScrollToGallery}
-            className="pt-2 px-4 text-black focus:outline-none"
-            style={{
-              fontWeight: 500,
-              fontFamily: "'Inter', sans-serif",
-            }}
-          >
-            GO BACK TO GALLERY
-          </button>
+          <Link href="/#gallery" passHref> {/* Update href to include the section's id */}
+            <button
+              className="pt-2 px-4 text-black focus:outline-none"
+              style={{
+                fontWeight: 500,
+                fontFamily: "'Inter', sans-serif",
+              }}
+            >
+              GO BACK TO GALLERY
+            </button>
+          </Link>
         </div>
       </nav>
     </header>
@@ -41,4 +32,3 @@ const GalleryHeader = () => {
 };
 
 export default GalleryHeader;
-
