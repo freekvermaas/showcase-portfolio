@@ -31,6 +31,22 @@ export default function Upendo() {
           alt="Services Page Design"
           className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
         />
+        <p className="text-base md:text-lg font-inter font-semibold mt-6">
+          ‘TRAINING’ PAGINA (DESKTOP DESIGN)
+        </p>
+        <img
+          src="/images/page1_2.svg"
+          alt="Training Page Design"
+          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+        />
+        <p className="text-base md:text-lg font-inter font-semibold mt-6">
+          ‘BOOKING’ PAGINA (DESKTOP DESIGN)
+        </p>
+        <img
+          src="/images/page1_3.svg"
+          alt="Booking Page Design"
+          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+        />
       </div>
       <Footer/>
     </div>
