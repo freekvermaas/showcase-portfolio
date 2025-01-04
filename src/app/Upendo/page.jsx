@@ -3,6 +3,7 @@
 import React from 'react';
 import GalleryHeader from '../../components/GalleryHeader';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 
 export default function Upendo() {
   return (
@@ -26,26 +27,35 @@ export default function Upendo() {
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           ‘SERVICES’ PAGINA (DESKTOP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page1_1.svg"
           alt="Services Page Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           ‘TRAINING’ PAGINA (DESKTOP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page1_2.svg"
           alt="Training Page Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           ‘BOOKING’ PAGINA (DESKTOP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page1_3.svg"
-          alt="Booking Page Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          alt="Bpoking Page Design"
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
       </div>
       <Footer/>

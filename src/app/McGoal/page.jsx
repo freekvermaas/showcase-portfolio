@@ -3,6 +3,7 @@
 import React from 'react';
 import GalleryHeader from '../../components/GalleryHeader';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 
 export default function McGoal() {
   return (
@@ -36,18 +37,24 @@ export default function McGoal() {
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           MCGOAL HUB SCREEN (MOBILE APP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page3_2.svg"
           alt="McGoal Hub Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           EK2024 LOADING SCREEN (MOBILE APP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page3_3.svg"
           alt="McGoal Loading Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
       </div>
       <Footer/>

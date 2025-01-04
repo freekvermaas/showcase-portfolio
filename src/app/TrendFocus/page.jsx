@@ -3,6 +3,7 @@
 import React from 'react';
 import GalleryHeader from '../../components/GalleryHeader';
 import Footer from '../../components/Footer';
+import Image from 'next/image';
 
 export default function TrendFocus() {
   return (
@@ -26,26 +27,35 @@ export default function TrendFocus() {
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           HOMEPAGINA (DESKTOP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page2_1.svg"
           alt="Home Page Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           ‘NIEUWS’ PAGINA (DESKTOP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page2_2.svg"
           alt="Nieuws Page Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
         <p className="text-base md:text-lg font-inter font-semibold mt-6">
           ‘INTERVIEWS’ PAGINA (DESKTOP DESIGN)
         </p>
-        <img
+        <Image
           src="/images/page2_3.svg"
           alt="Interviews Page Design"
-          className="mt-2 w-full md:w-3/4 lg:w-1/2"  // Adjust margin as needed
+          width={800}
+          height={600}
+          quality={100}
+          priority
         />
       </div>
       <Footer/>
