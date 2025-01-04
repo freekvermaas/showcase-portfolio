@@ -1,38 +1,42 @@
 import { memo } from "react";
+
 const About = memo(function About() {
   return (
-<div className="flex-shrink-0 w-screen h-screen snap-start bg-black text-slate-50 p-8 flex flex-row justify-between items-center">
+    <div className="w-screen h-screen snap-start bg-black text-slate-50 p-4 md:p-6 lg:p-8 flex flex-col md:flex-row justify-between items-start overflow-hidden">
       {/* Linker sectie */}
-<div className="flex flex-col mt-1 md:mt-2 lg:mt-4 bg-red-500 w-1/2 max-w-lg">
-<div>
-<img
+      <div className="w-[90%] h-[90%] md:w-1/2 lg:w-5/12 mb-8 md:mb-0 mt-5 relative">
+        <div className="relative transform translate-x-8 translate-y-16 md:translate-x-20 md:translate-y-24">
+          <img
             src="/images/personalscenery3.png"
             alt="Personal Scenery"
             className="w-full h-auto"
           />
-<p className="text-white text-base font-inter font-light mt-8">
-            Mijn naam is Freek Vermaas, een 19-jarige UX/UI designer uit Tilburg <br></br>
-            met een sterke passie voor innovatie en creativiteit. Ik ben zeer<br></br>
-            ervaren met Adobe Photoshop en Figma, maar kan ook werken met<br></br>
-            andere hulptools zoals Adobe Illustrator en Premiere Pro. Ook kan ik<br></br>
-            goed op weg met AI tools als ChatGPT, Midjourney en Ideogram.<br></br>
-<br></br>
-            Ik ben op zoek naar mogelijkheden binnen dit werkgebied om mijn<br></br>
-            skills te verbeteren, mijn kennis te vergroten en mijn<br></br>
+          <p className="text-white text-base font-inter font-light mt-4 md:mt-6 lg:mt-8">
+            Mijn naam is Freek Vermaas, een 19-jarige UX/UI designer uit Tilburg
+            met een sterke passie voor innovatie en creativiteit. Ik ben zeer
+            ervaren met Adobe Photoshop en Figma, maar kan ook werken met
+            andere hulptools zoals Adobe Illustrator en Premiere Pro. Ook kan ik
+            goed op weg met AI tools als ChatGPT, Midjourney en Ideogram.
+            <br /><br />
+            Ik ben op zoek naar mogelijkheden binnen dit werkgebied om mijn
+            skills te verbeteren, mijn kennis te vergroten en mijn
             creativiteit en inzicht tot het uiterste te testen.
-</p>
-</div>
-</div>
- 
+          </p>
+        </div>
+      </div>
+
       {/* Rechter sectie */}
-<div className="flex justify-center items-center bg-blue-500">
-<img
-          src="/images/freekphotofinal.svg" // Gebruik hier het juiste pad naar je SVG-bestand
-          alt="Custom SVG"
-          className="w-5/6 h-auto object-cover"
-        />
-</div>
-</div>
+      <div className="w-[90%] md:w-1/2 lg:w-7/12 flex justify-center items-end h-full relative mt-5">
+        <div className="transform translate-y-8 md:translate-y-16 lg:translate-y-20 translate-x-8 md:translate-x-10 lg:translate-x-12">
+          <img
+            src="/images/freekphotofinal.svg"
+            alt="Custom SVG"
+            className="w-full h-auto object-contain max-h-full max-w-[95%] scale-95"
+          />
+        </div>
+      </div>
+    </div>
   );
 });
+
 export default About;
