@@ -1,9 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'; // Import Link from Next.js
 
 const GalleryHeader = () => {
+  const [scrollingUp, setScrollingUp] = useState(true); // Track scroll direction
+  const [lastScrollY, setLastScrollY] = useState(0); // Track the last scroll position
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Get the current scroll position
+      const currentScrollY = window.scrollY;
+
+      // If the user is scrolling down, hide the header
+      if (currentScrollY > lastScrollY) {
+        setScrollingUp(false);
+      } else {
+        setScrollingUp(true);
+      }
+
+      // Update last scroll position
+      setLastScrollY(currentScrollY);
+    };
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <header className="fixed top-0 left-0 w-full pt-4">
+    <header
+      className={`fixed top-0 left-0 w-full pt-4 transition-all duration-300 ${
+        scrollingUp ? 'opacity-100' : 'opacity-0'
+      }`}
+      style={{
+        transition: 'opacity 0.3s ease-out', // Smooth transition
+      }}
+    >
       <nav className="flex justify-center items-center max-w-4xl mx-auto relative">
         <div className="relative">
           <div

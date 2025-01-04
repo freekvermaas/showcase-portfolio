@@ -3,24 +3,28 @@ import { memo } from "react";
 const Hero = memo(function Hero() {
   return (
     <div className="flex-shrink-0 w-screen h-screen snap-start bg-white text-slate-50 p-8 flex flex-col justify-center items-start pt-20">
-      <div className="mb-20 md:mb-40 lg:mb-60">
-        <h1 className="text-black text-base font-extralight font-inter ml-4 md:ml-8 lg:ml-16">
-          Portfolio
-        </h1>
-        <h2 className="text-black text-4xl md:text-5xl font-inter ml-4 md:ml-8 lg:ml-16">
-          <span className="font-bold">FREEK</span>{" "}
-          <span className="font-extralight italic">VERMAAS</span>
-        </h2>
-        <div className="relative">
-          <img
-            src="/images/code1.png"
-            className="w-full h-auto mt-1 ml-0.5 md:ml-1 lg:ml-2"
-          />
-          <img
-            src="/images/tempimage1.png"
-            className="absolute top-full left-0 w-full h-auto mt-4 ml-4 md:ml-8 lg:ml-16"
-          />
+      <div className="flex flex-col justify-center mt-20">
+      <div className="flex justify-center w-full">
+        <div className="flex flex-col justify-start w-[75%]">
+          <div className="">
+            <p className="text-base font-inter font-extralight text-black">Portfolio</p>
+          </div>
+          <div className="">
+            <h1 className="text-4xl md:text-5xl text-black">
+              <span className="font-extrabold font-inter">FREEK</span>{" "}
+              <span className="font-light italic font-inter">VERMAAS</span>
+            </h1>
+          </div>
+          <div>
+            <img src="/images/imtheman.svg" alt="Code Image" className="w-[80%] h-[20px]"/>
+          </div>
         </div>
+      </div>
+      <div className="flex justify-center w-full mt-1.5">
+        <div className="w-[75%] h-[100%]">
+          <img src="/images/zugpsitze_mountain_1.svg" alt="Hero Image" className="w-full"/>
+        </div>
+      </div>
       </div>
     </div>
   );
