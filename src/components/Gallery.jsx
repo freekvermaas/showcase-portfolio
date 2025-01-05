@@ -37,7 +37,7 @@ const Gallery = memo(function Gallery({ onScroll }) {
       <div className="flex h-[100%] justify-center mb-20">
         <div className="flex w-[75%]">
           <div className="flex flex-col items-end w-1/3 space-y-5 ml-20">
-            <button className="mt-5">
+            <div className="mt-5" onClick={() => window.location.href = "/TBD"}>
               <HoverImage
                 preHoverSrc="/images/pre_tbd_showcase.png"
                 postHoverSrc="/images/post_tbd_showcase.png"
@@ -45,8 +45,8 @@ const Gallery = memo(function Gallery({ onScroll }) {
                 width={250}
                 height={300}
               />
-            </button>
-            <button onClick={() => window.location.href = "/Fotografie"}>
+            </div>
+            <div onClick={() => window.location.href = "/Fotografie"}>
               <HoverImage
                 preHoverSrc="/images/pre_fotografie_showcase.png"
                 postHoverSrc="/images/post_fotografie_showcase.png"
@@ -54,10 +54,10 @@ const Gallery = memo(function Gallery({ onScroll }) {
                 width={250}
                 height={300}
               />
-            </button>
+            </div>
           </div>
           <div className="flex flex-col items-center w-1/3 space-y-5">
-            <button className="mt-5" onClick={() => window.location.href = "/Upendo"}>
+            <div className="mt-5" onClick={() => window.location.href = "/Upendo"}>
               <HoverImage
                 preHoverSrc="/images/pre_upendo_showcase.png"
                 postHoverSrc="/images/post_upendo_showcase.png"
@@ -65,8 +65,8 @@ const Gallery = memo(function Gallery({ onScroll }) {
                 width={275}
                 height={250}
               />
-            </button>
-            <button onClick={() => window.location.href = "/TrendFocus"}>
+            </div>
+            <div onClick={() => window.location.href = "/TrendFocus"}>
               <HoverImage
                 preHoverSrc="/images/pre_trendfocus_showcase.png"
                 postHoverSrc="/images/post_trendfocus_showcase.png"
@@ -74,8 +74,8 @@ const Gallery = memo(function Gallery({ onScroll }) {
                 width={275}
                 height={250}
               />
-            </button>
-            <button onClick={() => window.location.href = "/McGoal"}>
+            </div>
+            <div onClick={() => window.location.href = "/McGoal"}>
               <HoverImage
                 preHoverSrc="/images/pre_mcgoal_showcase.png"
                 postHoverSrc="/images/post_mcgoal_showcase.png"
@@ -83,10 +83,10 @@ const Gallery = memo(function Gallery({ onScroll }) {
                 width={275}
                 height={250}
               />
-            </button>
+            </div>
           </div>
           <div className="flex flex-col items-start w-1/3 space-y-5 mr-20">
-            <button className="mt-5" onClick={() => window.location.href = "/Editing"}>
+            <div className="mt-5" onClick={() => window.location.href = "/Editing"}>
               <HoverImage
                 preHoverSrc="/images/pre_videoediting_showcase.png"
                 postHoverSrc="/images/post_videoediting_showcase.png"
@@ -94,8 +94,8 @@ const Gallery = memo(function Gallery({ onScroll }) {
                 width={250}
                 height={300}
               />
-            </button>
-            <button onClick={() => window.location.href = "/Extra"}>
+            </div>
+            <div onClick={() => window.location.href = "/Extra"}>
               <HoverImage
                 preHoverSrc="/images/pre_extra_showcase.png"
                 postHoverSrc="/images/post_extra_showcase.png"
@@ -103,7 +103,7 @@ const Gallery = memo(function Gallery({ onScroll }) {
                 width={250}
                 height={300}
               />
-            </button>
+            </div>
           </div>
         </div>
       </div>
@@ -113,4 +113,3 @@ const Gallery = memo(function Gallery({ onScroll }) {
 });
 
 export default Gallery;
-

@@ -1,30 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'; // Import Link from Next.js
+import Link from 'next/link';
 
 const GalleryHeader = () => {
-  const [scrollingUp, setScrollingUp] = useState(true); // Track scroll direction
-  const [lastScrollY, setLastScrollY] = useState(0); // Track the last scroll position
+  const [scrollingUp, setScrollingUp] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Get the current scroll position
       const currentScrollY = window.scrollY;
 
-      // If the user is scrolling down, hide the header
       if (currentScrollY > lastScrollY) {
         setScrollingUp(false);
       } else {
         setScrollingUp(true);
       }
 
-      // Update last scroll position
       setLastScrollY(currentScrollY);
     };
 
-    // Attach the scroll event listener
     window.addEventListener('scroll', handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -36,7 +31,7 @@ const GalleryHeader = () => {
         scrollingUp ? 'opacity-100' : 'opacity-0'
       }`}
       style={{
-        transition: 'opacity 0.3s ease-out', // Smooth transition
+        transition: 'opacity 0.3s ease-out',
       }}
     >
       <nav className="flex justify-center items-center max-w-4xl mx-auto relative">
@@ -44,12 +39,12 @@ const GalleryHeader = () => {
           <div
             className="absolute top-0 left-0 right-0 h-px bg-black"
             style={{
-              width: 'calc(100% - 2rem)', // Adjust this value to match the button's padding
-              left: '1rem', // Half of the horizontal padding
+              width: 'calc(100% - 2rem)',
+              left: '1rem',
             }}
             aria-hidden="true"
           />
-          <Link href="/#gallery" passHref> {/* Update href to include the section's id */}
+          <Link href="/#gallery" passHref>
             <button
               className="pt-2 px-4 text-black focus:outline-none"
               style={{
