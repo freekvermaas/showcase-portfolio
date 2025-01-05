@@ -9,7 +9,8 @@ import Header from "../components/Header";
 export default function Home() {
   const scrollContainerRef = useRef(null);
   const [activeSection, setActiveSection] = useState("hero");
-  const [isScrolling, setIsScrolling] = useState(false); // Prevent multiple scrolls at once
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [isGalleryScrolled, setIsGalleryScrolled] = useState(false);
 
   useEffect(() => {
     const sections = {
@@ -41,7 +42,7 @@ export default function Home() {
   }, []);
 
   const handleWheel = (e) => {
-    if (isScrolling) return;
+    if (isScrolling || (activeSection === "gallery" && isGalleryScrolled)) return;
 
     const container = scrollContainerRef.current;
     if (!container) return;
@@ -66,6 +67,9 @@ export default function Home() {
       return;
     }
 
+    // Prevent default scrolling behavior
+    e.preventDefault();
+
     // Smooth scroll to the target position
     setIsScrolling(true);
     container.scrollTo({
@@ -74,7 +78,11 @@ export default function Home() {
     });
 
     // Wait until scrolling completes
-    setTimeout(() => setIsScrolling(false), 500); // Adjust timeout based on smooth scroll duration
+    setTimeout(() => setIsScrolling(false), 500);
+  };
+
+  const handleGalleryScroll = (isScrolled) => {
+    setIsGalleryScrolled(isScrolled);
   };
 
   return (
@@ -92,8 +100,9 @@ export default function Home() {
         <About />
       </div>
       <div id="gallery" className="snap-center w-screen">
-        <Gallery />
+        <Gallery onScroll={handleGalleryScroll} />
       </div>
     </div>
   );
 }
+

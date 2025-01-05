@@ -1,12 +1,34 @@
 'use client';
 
-import { memo } from "react";
-import Image from "next/image";
+import { memo, useEffect, useRef } from "react";
 import Footer from '../components/Footer';
+import HoverImage from '../components/HoverImage';
 
-const Gallery = memo(function Gallery() {
+const Gallery = memo(function Gallery({ onScroll }) {
+  const galleryRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (galleryRef.current) {
+        const scrollTop = galleryRef.current.scrollTop;
+        onScroll(scrollTop > 10);
+      }
+    };
+
+    const galleryElement = galleryRef.current;
+    if (galleryElement) {
+      galleryElement.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (galleryElement) {
+        galleryElement.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, [onScroll]);
+
   return (
-    <div className="w-screen h-screen text-slate-950 flex flex-col overflow-y-auto">
+    <div ref={galleryRef} className="w-screen h-screen text-slate-950 flex flex-col overflow-y-auto">
       <div className="flex justify-center pt-20">
         <h1 className="text-5xl font-bold text-[#533C3C] font-inter leading-tight">
           Gallery
@@ -15,73 +37,73 @@ const Gallery = memo(function Gallery() {
       <div className="flex h-[100%] justify-center mb-20">
         <div className="flex w-[75%]">
           <div className="flex flex-col items-end w-1/3 space-y-5 ml-20">
-            <div className="mt-5">
-              <Image
-                src="/images/pre_tbd_showcase.png"
-                alt="Question mark Showcase"
+            <button className="mt-5">
+              <HoverImage
+                preHoverSrc="/images/pre_tbd_showcase.png"
+                postHoverSrc="/images/post_tbd_showcase.png"
+                alt="TBD Showcase"
                 width={250}
-                height={400}
-                className="object-cover"
+                height={300}
               />
-            </div>
-            <div>
-              <Image
-                src="/images/pre_fotografie_showcase.png"
+            </button>
+            <button onClick={() => window.location.href = "/Fotografie"}>
+              <HoverImage
+                preHoverSrc="/images/pre_fotografie_showcase.png"
+                postHoverSrc="/images/post_fotografie_showcase.png"
                 alt="Fotografie Showcase"
                 width={250}
-                height={400}
-                className="object-cover"
+                height={300}
               />
-            </div>
+            </button>
           </div>
           <div className="flex flex-col items-center w-1/3 space-y-5">
-            <div className="mt-5">
-              <Image
-                src="/images/pre_upendo_showcase.png"
+            <button className="mt-5" onClick={() => window.location.href = "/Upendo"}>
+              <HoverImage
+                preHoverSrc="/images/pre_upendo_showcase.png"
+                postHoverSrc="/images/post_upendo_showcase.png"
                 alt="Upendo Showcase"
-                width={250}
+                width={275}
                 height={250}
-                className="object-cover"
               />
-            </div>
-            <div>
-              <Image
-                src="/images/pre_trendfocus_showcase.png"
+            </button>
+            <button onClick={() => window.location.href = "/TrendFocus"}>
+              <HoverImage
+                preHoverSrc="/images/pre_trendfocus_showcase.png"
+                postHoverSrc="/images/post_trendfocus_showcase.png"
                 alt="TrendFocus Showcase"
-                width={250}
+                width={275}
                 height={250}
-                className="object-cover"
               />
-            </div>
-            <div>
-              <Image
-                src="/images/pre_mcgoal_showcase.png"
+            </button>
+            <button onClick={() => window.location.href = "/McGoal"}>
+              <HoverImage
+                preHoverSrc="/images/pre_mcgoal_showcase.png"
+                postHoverSrc="/images/post_mcgoal_showcase.png"
                 alt="McGoal Showcase"
-                width={250}
+                width={275}
                 height={250}
-                className="object-cover"
               />
-            </div>
+            </button>
           </div>
           <div className="flex flex-col items-start w-1/3 space-y-5 mr-20">
-            <div className="mt-5">
-              <Image
-                src="/images/pre_videoediting_showcase.png"
+            <button className="mt-5" onClick={() => window.location.href = "/Editing"}>
+              <HoverImage
+                preHoverSrc="/images/pre_videoediting_showcase.png"
+                postHoverSrc="/images/post_videoediting_showcase.png"
                 alt="Video editing Showcase"
                 width={250}
-                height={400}
-                className="object-cover"
+                height={300}
               />
-            </div>
-            <div>
-              <Image
-                src="/images/pre_extra_showcase.png"
+            </button>
+            <button onClick={() => window.location.href = "/Extra"}>
+              <HoverImage
+                preHoverSrc="/images/pre_extra_showcase.png"
+                postHoverSrc="/images/post_extra_showcase.png"
                 alt="Extra Showcase"
                 width={250}
-                height={400}
-                className="object-cover"
+                height={300}
               />
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -91,3 +113,4 @@ const Gallery = memo(function Gallery() {
 });
 
 export default Gallery;
+
