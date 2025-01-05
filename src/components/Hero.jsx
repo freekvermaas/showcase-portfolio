@@ -12,7 +12,7 @@ const Hero = memo(function Hero() {
           <div className="">
             <h1 className="text-4xl md:text-5xl text-black">
               <span className="font-extrabold font-inter">FREEK</span>{" "}
-              <span className="font-light italic font-inter">VERMAAS gay</span>
+              <span className="font-light italic font-inter">VERMAAS</span>
             </h1>
           </div>
           <div>
@@ -22,7 +22,7 @@ const Hero = memo(function Hero() {
       </div>
       <div className="flex justify-center w-full mt-1.5">
         <div className="w-[75%] h-[100%]">
-          <img src="/images/zugpsitze_mountain_1.svg" alt="Hero Image" className="w-full"/>
+          <img src="/images/tempimage1.png" alt="Hero Image" className="w-full"/>
         </div>
       </div>
       </div>
