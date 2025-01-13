@@ -4,7 +4,7 @@ import React from 'react';
 import GalleryHeader from '../../components/GalleryHeader';
 import Footer from '../../components/Footer';
 
-export default function Editing() {
+export default function editing() {
   return (
     <div className="flex flex-col min-h-screen">
       <GalleryHeader/>

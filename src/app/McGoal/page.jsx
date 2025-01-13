@@ -5,7 +5,7 @@ import GalleryHeader from '../../components/GalleryHeader';
 import Footer from '../../components/Footer';
 import Image from 'next/image';
 
-export default function McGoal() {
+export default function mcgoal() {
   return (
     <div className="flex flex-col min-h-screen">
       <GalleryHeader />
