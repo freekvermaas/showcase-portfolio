@@ -37,11 +37,11 @@ const Gallery = memo(function Gallery({ onScroll }) {
       <div className="flex h-[100%] justify-center mb-20">
         <div className="flex w-[75%]">
           <div className="flex flex-col items-end w-1/3 space-y-5 ml-20">
-            <div className="mt-5" onClick={() => window.location.href = "/TBD"}>
+            <div className="mt-5" onClick={() => window.location.href = "/worldofpocs"}>
               <HoverImage
-                preHoverSrc="/images/pre_tbd_showcase.png"
-                postHoverSrc="/images/post_tbd_showcase.png"
-                alt="TBD Showcase"
+                preHoverSrc="/images/pre_worldofpocs_showcase2.svg"
+                postHoverSrc="/images/post_worldofpocs_showcase2.svg"
+                alt="World of POC's Showcase"
                 width={250}
                 height={300}
               />
