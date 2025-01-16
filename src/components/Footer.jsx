@@ -17,7 +17,7 @@ export default function Footer() {
                   <a href="https://www.instagram.com/freekvermaas" className="block text-sm font-inter font-light text-gray-300 hover:text-white transition-colors">
                     Instagram
                   </a>
-                  <a href="https://www.linkedin.com/in/freek-vermaas-581b18303/" className="block text-sm font-inter font-light text-gray-300 hover:text-white transition-colors">
+                  <a href="https://www.linkedin.com/in/freekvermaas" className="block text-sm font-inter font-light text-gray-300 hover:text-white transition-colors">
                     LinkedIn
                   </a>
                 </div>
