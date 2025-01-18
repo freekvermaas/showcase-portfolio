@@ -18,9 +18,54 @@ export default function worldofpocs() {
               WORLD OF POC'S
             </h1>
             <p className="text-base md:text-lg font-inter font-extralight text-center">
-            TBD.
+            Een website waarin ik allerlei verschillende POC’s (Proof of Concepts) maak<br></br>
+            en het proces ervan vervolgens uitleg.<br></br>
+            <br></br>
+            Dit is een development project voor semester 2 dat ik heb gemaakt om mijn<br></br>
+            vaardigheden in coderen te laten zien, maar ik heb alsnog veel tijd besteed<br></br>
+            aan het design van deze website.
             </p>
           </div>
+
+        {/* Design Examples Section */}
+        <div className="mb-16">
+            <p className="text-base md:text-lg font-inter font-extralight text-center">
+            <span className="text-4xl md:text-5xl font-bold block">DESIGN VOORBEELDEN</span>
+            
+            </p>
+        </div>
+
+        {/* Design Previews */}
+        <div className="space-y-12">
+            <div>
+            <p className="text-base md:text-lg font-inter font-semibold text-center mb-4">
+                HOMEPAGINA (DESKTOP DESIGN)
+            </p>
+            <Image
+                src="/images/page4_1.svg"
+                alt="Home Page Design 2"
+                width={640}
+                height={480}
+                quality={100}
+                priority
+                className="mx-auto"
+            />
+            </div>
+            <div className="mt-12">
+            <p className="text-base md:text-lg font-inter font-semibold text-center mb-4">
+                'EXPERIENCES' PAGINA (DESKTOP DESIGN)
+            </p>
+            <Image
+                src="/images/page4_2.svg"
+                alt="Experiences Page Design"
+                width={640}
+                height={480}
+                quality={100}
+                priority
+                className="mx-auto"
+            />
+            </div>
+        </div>
         </div>
       </div>
       <Footer />
