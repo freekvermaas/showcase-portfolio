@@ -26,12 +26,12 @@ const About = memo(function About() {
       </div>
 
       {/* Rechter sectie */}
-      <div className="w-[90%] md:w-1/2 lg:w-7/12 flex justify-center items-end h-full relative mt-5">
-        <div className="transform translate-y-8 md:translate-y-16 lg:translate-y-20 translate-x-8 md:translate-x-10 lg:translate-x-12">
+      <div className="w-full md:w-1/2 lg:w-7/12 flex justify-center items-center h-full relative">
+        <div className="relative w-full h-full max-w-[90%] lg:max-w-[80%] flex justify-center items-center translate-y-16 md:translate-y-20 lg:translate-y-24">
           <img
             src="/images/freekphotofinal.svg"
             alt="Custom SVG"
-            className="w-full h-auto object-contain max-h-full max-w-[95%] scale-95"
+            className="w-full h-auto object-contain max-h-[80vh]"
           />
         </div>
       </div>
