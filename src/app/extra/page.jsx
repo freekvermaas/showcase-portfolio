@@ -26,7 +26,7 @@ export default function extra() {
           <div className="space-y-12">
             <div>
               <p className="text-base md:text-lg font-inter font-extralight text-center">
-              <span className="text-4xl md:text-5xl font-bold block mb-12">COOKBOOK HOMEPAGE</span>
+              <span className="text-4xl md:text-5xl font-bold block mb-12">COOKBOOK COVER</span>
               </p>
               <Image
                 src="/images/extra1.jpeg"
