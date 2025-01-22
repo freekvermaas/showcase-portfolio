@@ -54,12 +54,10 @@ export default function Home() {
     let targetScrollLeft;
 
     if (e.deltaY > 0) {
-      // Scroll forward
       const currentIndex = Math.floor(currentScrollLeft / containerWidth);
       const nextIndex = Math.min(sections.length - 1, currentIndex + 1);
       targetScrollLeft = nextIndex * containerWidth;
     } else if (e.deltaY < 0) {
-      // Scroll backward
       const currentIndex = Math.floor(currentScrollLeft / containerWidth);
       const prevIndex = Math.max(0, currentIndex - 1);
       targetScrollLeft = prevIndex * containerWidth;
@@ -67,17 +65,14 @@ export default function Home() {
       return;
     }
 
-    // Prevent default scrolling behavior
     e.preventDefault();
 
-    // Smooth scroll to the target position
     setIsScrolling(true);
     container.scrollTo({
       left: targetScrollLeft,
       behavior: "smooth",
     });
 
-    // Wait until scrolling completes
     setTimeout(() => setIsScrolling(false), 500);
   };
 
